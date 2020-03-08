@@ -15,3 +15,7 @@ const result = function dds(input) {
 
 
 result("test");
+
+const erew = arg => {
+    console.log("CALL FUnction " + arg);
+};
