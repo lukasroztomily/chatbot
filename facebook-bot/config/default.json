@@ -1,7 +1,7 @@
 {
-    "APP_SECRET": "fbe21f6349a8e70f6a237d5a92abafe6",
-    "ACCESS_TOKEN":  "EAArRPXFdKRwBAKB7xEYZCuwD6L4BNRWae2YwXT2gPPBtlb4s8TSdZBzZACdLhZAVYPIzfoksF1GbaZA6Fx3t6Ba3Je4xs4nLknBl6ZAsDL8z2fph3422dTzwhcBcwbJmO05vGxwClT5cPDGyGeC4XyPCynJXgwuZCvXameVdeBFhQZDZD",
-    "VERIFY_TOKEN": "devel",
+    "APP_SECRET": "",
+    "ACCESS_TOKEN":  "",
+    "VERIFY_TOKEN": "",
     "PORT": 8007
 
 }
