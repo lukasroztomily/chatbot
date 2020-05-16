@@ -20,7 +20,16 @@ const bot = new BootBot({
 
 
 bot.hear('adresa', (payload, chat) => { // 1 
-  const getBucketCity = (convo) => { // 2
+  const getBucketName = (convo) => { // 2
+    convo.ask("Jaké je Vaše jméno a příjmení. Odpovídejte ve formátu 'jméno' 'vaše_jméno' Např.: jméno Josef Novák", (payload, convo) => {;
+        
+      var name = payload.message.text;
+      console.log(name);
+      convo.set('jméno', name) ;// 3
+      convo.say("Jméno nastaveno jako "+name).then(() => getBucketCity(convo)); // 3 
+    });
+  };
+    const getBucketCity = (convo) => { // 2
     convo.ask("Ve kterém městě bydlíte? Odpovídejte ve formátu 'město' 'název_města' Např.: město Praha", (payload, convo) => {;
         
       var city = payload.message.text;
@@ -45,9 +54,10 @@ bot.hear('adresa', (payload, chat) => { // 1
   };
   const finishing = (convo) => {
     var newConfigInfo = {
+      name: convo.get('name'),
       city: convo.get('city'),
-      read_key: convo.get('read_key'),
-      write_key: convo.get('write_key')
+      street: convo.get('street'),
+      ZIP: convo.get('ZIP')
     }; 
     config.bucket = newConfigInfo; // 4
     convo.say('Adresa nastavena! :)');
@@ -55,7 +65,7 @@ bot.hear('adresa', (payload, chat) => { // 1
   };
   
   chat.conversation((convo) => {
-    getBucketCity(convo) ;// 5
+    getBucketName(convo) ;// 5
   });
 });
 
