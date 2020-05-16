@@ -18,6 +18,6 @@ PSC
 Scenář začíná výrazem "Ahoj". Chatbot zareaguje a zeptá se, jestli uživatel má zájem o vtip.
 Uživatel vybírá mezi odpovědí "ANO", "NE". 
 
-Pokud je zvolená odpověd "ANO" chatbot v pozadí se dotáže  API http://api.icndb.com/jokes/random. API odpoví náhodně vybraný  vtip ve formátu JSON. Chatbot pak výsledek z API převede do správného formátu a předá ho uživateli. Tím scenář úspěšně končí.
+Pokud je zvolená odpověd "ANO", chatbot v pozadí se dotáže  API http://api.icndb.com/jokes/random. API odpoví náhodně vybraným  vtipem ve formátu JSON. Chatbot pak výsledek z API převede do správného formátu a zobrazí ho uživateli. Tím scenář úspěšně končí.
 
 Pokud je zvolená odpověd "NE" chatbot se rozloučí a scenář úspěšně končí. 
