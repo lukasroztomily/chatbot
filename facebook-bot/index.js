@@ -6,7 +6,6 @@ const fetch = require('node-fetch');
 var port = process.env.PORT || config.get('PORT');
 
 
-const MOVIE_API = "http://www.omdbapi.com/?apikey=33d495d0";
 
 const JOKE_API = "http://api.icndb.com/jokes/random";
 
